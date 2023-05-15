@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+  <!ELEMENT biblioteca (libros, periodicos, revistas)>
+  <!ELEMENT libros (libro+)>
+  <!ELEMENT libro (titulo_libro, sinopsis, indice_l)>
+  <!ATTLIST libro id ID #REQUIRED
+                  tipo_clase CDATA #REQUIRED
+                  numpag CDATA #REQUIRED>
+  <!ELEMENT titulo_libro (#PCDATA)>
+  <!ELEMENT sinopsis (#PCDATA)>
+  <!ELEMENT indice_l (capitulo+)>
+  <!ELEMENT capitulo (contenido)>
+  <!ATTLIST capitulo id ID #REQUIRED
+                     titulo_cap CDATA #REQUIRED
+                     numpag_cap CDATA #REQUIRED>
+  <!ELEMENT contenido EMPTY>
+  <!ATTLIST contenido enlace CDATA #REQUIRED>
+
+  <!ELEMENT periodicos (periodico+)>
+  <!ELEMENT periodico (indice_p)>
+  <!ATTLIST periodico id ID #REQUIRED
+                      tipo_clase CDATA #REQUIRED
+                      fecha CDATA #REQUIRED>
+  <!ELEMENT indice_p (seccion_p+)>
+  <!ELEMENT seccion_p (articulo+)>
+  <!ATTLIST seccion_p id ID #REQUIRED
+                    tipo_seccion CDATA #REQUIRED>
+  <!ELEMENT articulo (titulo_articulo, contenido)>
+  <!ATTLIST articulo id ID #REQUIRED
+                     autor CDATA #REQUIRED>
+  <!ELEMENT titulo_articulo (#PCDATA)>
+
+  <!ELEMENT revistas (revista+)>
+  <!ELEMENT revista (titulo_revista, numero, indice_r)>
+  <!ATTLIST revista id ID #REQUIRED
+                    tipo_clase CDATA #REQUIRED
+                    numpag CDATA #REQUIRED>
+  <!ELEMENT titulo_revista (#PCDATA)>
+  <!ELEMENT numero (#PCDATA)>
+  <!ELEMENT indice_r (seccion_r+)>
+  <!ELEMENT seccion_r (contenido)>
+  <!ATTLIST seccion_r id ID #REQUIRED
+                      tipo_seccion CDATA #REQUIRED
+                      numpag_sec CDATA #REQUIRED>
+
+]>
+
+<biblioteca>
+  <libros>
+    <libro id="L0001" tipo_clase="novela" numpag="310">
+      <titulo_libro>Don Quijote de la Mancha</titulo_libro>
+      <sinopsis>Narra las aventuras de Alonso Quijano, un hidalgo pobre que de tanto leer novelas de caballería acaba enloqueciendo y creyendo ser un caballero andante, nombrándose a sí mismo como don Quijote de la Mancha.</sinopsis>
+       <indice_l>
+        <capitulo id="L0001_cap1" titulo_cap="Que trata de la condición y ejercicio del famoso y valiente hidalgo don Quijote de la Mancha" numpag_cap="3">
+          <contenido enlace="https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte1/cap01/default.htm"/>
+        </capitulo>
+        <capitulo id="L0001_cap2" titulo_cap="Que trata de la primera salida que de su tierra hizo el ingenioso don Quijote" numpag_cap="4">
+          <contenido enlace="https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte1/cap02/default.htm"/>
+        </capitulo>
+        <capitulo id="L0001_cap3" titulo_cap="Donde se cuenta la graciosa manera que tuvo don Quijote en armarse caballero" numpag_cap="3">
+          <contenido enlace="https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte1/cap03/default.htm"/>
+        </capitulo>
+      </indice_l>
+    </libro>
+    <libro id="L0002" tipo_clase="infantil" numpag="800">
+      <titulo_libro>La Historia Interminable</titulo_libro>
+      <sinopsis>Bastián Baltasar Bux es un niño de once años que descubre en  una librería un libro —titulado «La Historia Interminable»— que tiene poderes mágicos. Esa magia hace que el mismo Bastian se convierta en un héroe de esa historia que parece no terminarse nunca, en la que se unrirá a Atreyu, otro niño, con el objetivo de salvar al mundo de Fantasia, amenazado por el devorador avance de la Nada.</sinopsis>
+      <indice_l>
+        <capitulo id="L0002_cap1" titulo_cap="Fantasia en peligro" numpag_cap="14">
+          <contenido enlace="https://cdn.website-editor.net/6ea79b2447e44bbba6087346536e9583/files/uploaded/La%2520Historia%2520Interminable%2520-%2520Michael%2520Ende.pdf"/>
+        </capitulo>
+        <capitulo id="L0002_cap2" titulo_cap="El llamamiento de Atreyu" numpag_cap="17">
+          <contenido enlace="https://cdn.website-editor.net/6ea79b2447e44bbba6087346536e9583/files/uploaded/La%2520Historia%2520Interminable%2520-%2520Michael%2520Ende.pdf"/>
+        </capitulo>
+        <capitulo id="L0002_cap3" titulo_cap="La Vetusta Morla" numpag_cap="16">
+          <contenido enlace="https://cdn.website-editor.net/6ea79b2447e44bbba6087346536e9583/files/uploaded/La%2520Historia%2520Interminable%2520-%2520Michael%2520Ende.pdf"/>
+        </capitulo>
+      </indice_l>
+    </libro>
+    <libro id="L0003" tipo_clase="didactico" numpag="160">
+      <titulo_libro>XML para todos</titulo_libro>
+      <sinopsis>Pretende acercar XML al programador, al administrador, al usuario avanzado, al alumno de una Facultad, a un escritor, a un futuro ingeniero, a las amas de casa... en fín... a todos. XML se presentará como una herramienta con la que podrá realizar su trabajo diario de una forma más fácil y cómoda, con la garantía de que siempre podrá reutilizar el esfuerzo inicial en el futuro.</sinopsis>
+      <indice_l>
+        <capitulo id="L0003_cap1" titulo_cap="Introduccion" numpag_cap="4">
+          <contenido enlace="https://www.um.es/linux/xml/ponencia/XML_paratodos.pdf"/>
+        </capitulo>
+        <capitulo id="L0003_cap2" titulo_cap="El lenguaje XML 1.0" numpag_cap="9">
+          <contenido enlace="https://www.um.es/linux/xml/ponencia/XML_paratodos.pdf"/>
+        </capitulo>
+        <capitulo id="L0003_cap3" titulo_cap="Validacion de XML" numpag_cap="6">
+          <contenido enlace="https://www.um.es/linux/xml/ponencia/XML_paratodos.pdf"/>
+        </capitulo>
+      </indice_l>
+    </libro>
+  </libros>
+  <periodicos>
+    <periodico id="P0001" tipo_clase="nacional" fecha="2010-10-20"> <!--Formato AAAA-MM-DD-->
+      <indice_p>
+        <seccion_p id="P0001_E" tipo_seccion="economica">
+          <articulo id="P0001_E_01" autor="Jose Luis Gil">
+            <titulo_articulo>Turismo sueco en Benidorm</titulo_articulo>
+            <contenido enlace="https://www.periodiconacionalejemplo.com/economica/01"/>
+          </articulo>
+          <articulo id="P0001_E_02" autor="Fernando Tejero">
+            <titulo_articulo>Desempleo en Sri Lanka</titulo_articulo>
+            <contenido enlace="https://www.periodiconacionalejemplo.com/economica/02"/>
+          </articulo>
+        </seccion_p>
+        <seccion_p id="P0001_O" tipo_seccion="opinion">
+          <articulo id="P0001_O_01" autor="Malena Alterio">
+            <titulo_articulo>La cosa esta fatal</titulo_articulo>
+            <contenido enlace="https://www.periodiconacionalejemplo.com/opinion/01"/>
+          </articulo>
+          <articulo id="P0001_O_02" autor="Daniel Guzman">
+            <titulo_articulo>La cosa esta regular pero no tan mal</titulo_articulo>
+            <contenido enlace="https://www.periodiconacionalejemplo.com/opinion/02"/>
+          </articulo>
+        </seccion_p>
+      </indice_p>
+    </periodico>
+    <periodico id="P0002" tipo_clase="internacional" fecha="2023-05-15">
+      <indice_p>
+        <seccion_p id="P0002_D" tipo_seccion="deportes">
+          <articulo id="P0002_D_01" autor="Paul Allen">
+            <titulo_articulo>Is anybody playing cricket?</titulo_articulo>
+            <contenido enlace="https://www.internationalpressexample.com/sports/01"/>
+          </articulo>
+          <articulo id="P0002_D_02" autor="Marcus Halberstram">
+            <titulo_articulo>Curling, a dying sport</titulo_articulo>
+            <contenido enlace="https://www.internationalpressexample.com/sports/02"/>
+          </articulo>
+        </seccion_p>
+        <seccion_p id="P0002_I" tipo_seccion="internacional">
+          <articulo id="P0002_I_01" autor="Patrick Bateman">
+            <titulo_articulo>London's exciting video rental shops</titulo_articulo>
+            <contenido enlace="https://www.internationalpressexample.com/international/01"/>
+          </articulo>
+          <articulo id="P0002_I_02" autor="Timothy Bryce">
+            <titulo_articulo>Meet the chainsaw jugglers of New Zealand</titulo_articulo>
+            <contenido enlace="https://www.internationalpressexample.com/international/02"/>
+          </articulo>
+        </seccion_p>
+      </indice_p>
+    </periodico>
+  </periodicos>
+  <revistas>
+    <revista id="R0001" tipo_clase="informatica" numpag="80">
+      <titulo_revista>Magacin del programador avezado</titulo_revista>
+      <numero>4</numero>
+      <indice_r>
+        <seccion_r id="R0001_1" tipo_seccion="programacion" numpag_sec="10">
+          <contenido enlace="https://www.magacindelprogramadoravezado.com/4/programacion/"/>
+        </seccion_r>
+        <seccion_r id="R0001_2" tipo_seccion="consultorio" numpag_sec="15">
+          <contenido enlace="https://www.magacindelprogramadoravezado.com/4/consultorio/"/>
+        </seccion_r>
+      </indice_r>
+    </revista>
+    <revista id="R0002" tipo_clase="corazon" numpag="70">
+      <titulo_revista>Semanario de la maruja experta</titulo_revista>
+      <numero>8</numero>
+      <indice_r>
+        <seccion_r id="R0002_1" tipo_seccion="bodas" numpag_sec="12">
+          <contenido enlace="https://www.semanariodelamarujaexperta.com/8/bodas/"/>
+        </seccion_r>
+        <seccion_r id="R0002_2" tipo_seccion="bautizos" numpag_sec="17">
+          <contenido enlace="https://www.semanariodelamarujaexperta.com/8/bautizos/"/>
+        </seccion_r>
+      </indice_r>
+    </revista>
+    <revista id="R0003" tipo_clase="coches" numpag="40">
+      <titulo_revista>Diario del conductor hábil</titulo_revista>
+      <numero>15</numero>
+      <indice_r>
+        <seccion_r id="R0003_1" tipo_seccion="motores" numpag_sec="20">
+          <contenido enlace="https://www.diariodelconductorhabil.com/15/motores/"/>
+        </seccion_r>
+        <seccion_r id="R0003_2" tipo_seccion="llantas" numpag_sec="12">
+          <contenido enlace="https://www.diariodelconductorhabil.com/15/llantas/"/>
+        </seccion_r>
+      </indice_r>
+    </revista>
+    <revista id="R0004" tipo_clase="investigacion" numpag="120">
+      <titulo_revista>Boletín del investigador diestro</titulo_revista>
+      <numero>16</numero>
+      <indice_r>
+        <seccion_r id="R0004_1" tipo_seccion="fisica" numpag_sec="30">
+          <contenido enlace="https://www.boletindelinvestigadordiestro.com/16/fisica/"/>
+        </seccion_r>
+        <seccion_r id="R0004_2" tipo_seccion="quimica" numpag_sec="53">
+          <contenido enlace="https://www.boletindelinvestigadordiestro.com/16/quimica/"/>
+        </seccion_r>
+      </indice_r>
+    </revista>
+  </revistas>
+</biblioteca>
